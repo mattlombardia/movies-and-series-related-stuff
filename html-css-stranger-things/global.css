@@ -1,0 +1,113 @@
+:root {
+    --color-red: darkred;
+    --color-white: whitesmoke;
+    --color-shadow-black: rgba(0, 0, 0, 0.3);
+    --size-border-radius: 7px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url('bg.webp');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    color: var(--color-white);
+}
+
+footer {
+    position: absolute;
+    bottom: 3px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-shadow-black);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    margin: 50px 0 0 0;
+    display: inline-flex;
+}
+
+.menu li {
+    list-style: none;
+    margin: 1em 2em; 
+}
+
+.menu li a {
+    font-size: 2em;
+    color: var(--color-white);
+    text-decoration: none;
+    text-shadow: 7px 7px 10px var(--color-red);
+}
+
+.menu li a:hover {
+    text-shadow: 2px 2px 10px var(--color-white);
+}
+
+.brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: pulse 7s infinite;
+}
+
+.logo {
+    height: 70px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: 70%;
+    border: 1px solid var(--color-red);
+    border-radius: var(--size-border-radius);
+    background-color: var(--color-shadow-black);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 1050px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        margin: 25px 0 0 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .menu {
+        margin: 90px 0 0 0;
+    }
+
+    main img {
+        width: 100%;
+    }
+}
